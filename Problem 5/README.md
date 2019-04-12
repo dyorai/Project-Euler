@@ -15,5 +15,5 @@ What is the smallest positive number that is evenly divisible by all of the numb
 2. write command "py problem5.py" or "python problem5.py"
 
 ### Output
-Input nilai N : 20
+Input nilai N : 20 <br />
 Smallest multiple number : 232792560
