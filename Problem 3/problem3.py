@@ -27,14 +27,14 @@ def main():
     faktor_N = division(n)
     
     length_faktor = len(faktor_N)
-    
     for i in range(2,length_faktor):
         if(checkPrima(faktor_N[i])):
             faktor_prima.append(faktor_N[i]) 
-            
     length_prima = len(faktor_prima)
-
-    print("largest prime factor : ", faktor_prima[length_prima-1])
+    if(length_prima>0):
+        print("largest prime factor : ", faktor_prima[length_prima-1])
+    else :
+        print(n, " didn't had prime factor")
 
 if __name__ == "__main__":
     main()    
