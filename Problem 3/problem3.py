@@ -12,12 +12,12 @@ def division(N):
     return div
 
 def main():
-    n = int(input("Masukkan nilai n :"))
+    n = int(input("Input nilai n :"))
     bil_prima = []
     faktor_prima =[]
     akar_n = math.ceil(math.sqrt(n))
     faktor_N = division(n)
-    print(faktor_N)
+    
     length_faktor = len(faktor_N)
     for i in range(2,length_faktor):
         is_prima=True
@@ -29,8 +29,8 @@ def main():
         if(is_prima):
             faktor_prima.append(faktor_N[i]) 
     length_prima = len(faktor_prima)
-    print(faktor_prima)
-    print(faktor_prima[length_prima-1])
+
+    print("largest prime factor : ", faktor_prima[length_prima-1])
 
 if __name__ == "__main__":
     main()    
