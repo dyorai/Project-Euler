@@ -1,8 +1,7 @@
 # Problem 1
 
 def main():
-    print("Input nilai N")
-    N = int(input())
+    N = int(input("Input nilai N : "))
     data = []
     result = 0
     for i in range(1,N):
@@ -11,10 +10,7 @@ def main():
             result = result+i
 
     dataLength = len(data)
-    print("result : ")
-    for i in range(dataLength):
-        print(data[i],' ')
-    print(result)
+    print("result : ", result)
 
 if __name__ == "__main__":
     main()
