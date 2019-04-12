@@ -11,23 +11,27 @@ def division(N):
     div.append(N)
     return div
 
+def checkPrima(N):
+    is_prima=True
+    j=2
+    while(is_prima and j<N):
+        if(N%j==0):
+            is_prima = False
+            return is_prima
+        j+=1
+    return is_prima
+
 def main():
     n = int(input("Input nilai n :"))
-    bil_prima = []
     faktor_prima =[]
-    akar_n = math.ceil(math.sqrt(n))
     faktor_N = division(n)
     
     length_faktor = len(faktor_N)
+    
     for i in range(2,length_faktor):
-        is_prima=True
-        j=2
-        while(is_prima and j<faktor_N[i]):
-            if(faktor_N[i]%j==0):
-                is_prima=False
-            j+=1
-        if(is_prima):
+        if(checkPrima(faktor_N[i])):
             faktor_prima.append(faktor_N[i]) 
+            
     length_prima = len(faktor_prima)
 
     print("largest prime factor : ", faktor_prima[length_prima-1])
